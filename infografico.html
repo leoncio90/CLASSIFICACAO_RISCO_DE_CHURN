@@ -103,19 +103,34 @@
       .kpi-label {
         font-size: 0.875rem;
       }
-      /* HTML comment: Chosen color palette: Brilliant Blues */
-      /* HTML comment: Narrative Plan: Hook (Churn Problem) -> EDA Insights (Demographics, Behavior) -> Predictive Model (RF Tunado) -> Key Drivers -> Strategic Actions -> Expected Impact */
-      /* HTML comment: Visualization Choices: Big Number, Bar Charts, Scatter Plot, Horizontal Bar Chart (all via Chart.js Canvas). Flowcharts/diagrams via styled HTML/CSS if needed. No SVG or Mermaid JS used. */
+      .header-logo {
+        height: 130px; /* Tamanho da logomarca ajustado */
+        width: auto;
+        max-width: 320px; /* Largura máxima ajustada */
+        border-radius: 0.75rem; /* Cantos arredondados (rounded-xl) */
+      }
     </style>
   </head>
   <body class="bg-gray-100 text-gray-800 p-4 md:p-8">
     <header class="text-center mb-12">
-      <h1 class="text-4xl md:text-5xl font-bold text-primary-dark">
-        NCbank Guardian
-      </h1>
-      <p class="text-xl text-primary-medium mt-2">
-        Combatendo o Churn de Clientes com Inteligência de Dados
-      </p>
+      <div class="flex justify-center items-center mb-4">
+        <img
+          src="https://raw.githubusercontent.com/leoncio90/CLASSIFICACAO_RISCO_DE_CHURN/master/Logo_banco/logo2.png"
+          alt="Logomarca NCbank"
+          class="header-logo mr-4"
+          onerror="this.src='https://placehold.co/260x130/003366/FFFFFF?text=NCbank&font=inter'; this.onerror=null;"
+        />
+        <div>
+          <h1
+            class="text-4xl md:text-5xl font-bold text-primary-dark text-left"
+          >
+            NCbank Guardian
+          </h1>
+          <p class="text-xl text-primary-medium mt-1 text-left">
+            Combatendo o Churn de Clientes com Inteligência de Dados
+          </p>
+        </div>
+      </div>
     </header>
 
     <section class="mb-16">
@@ -212,9 +227,10 @@
           <canvas id="transactionsScatterPlot"></canvas>
         </div>
         <p class="text-center text-gray-600 mt-4 text-lg">
-          <strong>Insight Chave:</strong> Clientes que realizaram churn (Azul)
-          estão massivamente concentrados na área de baixo volume e baixo valor
-          de transações. Clientes existentes (ciano) demonstram maior atividade.
+          <strong>Insight Chave:</strong> Clientes que realizaram churn
+          (laranja) estão massivamente concentrados na área de baixo volume e
+          baixo valor de transações. Clientes existentes (azul) demonstram maior
+          atividade.
         </p>
       </div>
     </section>
@@ -313,12 +329,12 @@
 
     <section class="text-center bg-white p-8 rounded-lg shadow-xl">
       <h2 class="section-title">Impacto Esperado</h2>
-      <div class="stat-card inline-block bg-accent-teal text-white">
-        <h3 class="subsection-title text-center text-black">
+      <div class="stat-card inline-block bg-accent-teal">
+        <h3 class="subsection-title text-center text-primary-dark">
           Redução da Taxa de Churn
         </h3>
-        <span class="highlight-stat text-black">Meta: 15%</span>
-        <p class="text-center text-gray-600 mt-4 text-lg">
+        <span class="highlight-stat text-primary-dark">Meta: 15%</span>
+        <p class="mt-2 text-primary-dark">
           Implementando estas estratégias, o NCbank visa uma redução
           significativa na rotatividade de clientes.
         </p>
@@ -384,12 +400,12 @@
           datasets: [
             {
               label: "Clientes com Churn",
-              data: [935, 692], // Estimativa baseada na proporção (F > M)
+              data: [935, 692],
               backgroundColor: primaryMediumBlue,
             },
             {
               label: "Clientes Existentes",
-              data: [4400, 4100], // Estimativa
+              data: [4400, 4100],
               backgroundColor: lightGray,
             },
           ],
@@ -424,14 +440,14 @@
           datasets: [
             {
               label: "Clientes com Churn",
-              data: [100, 350, 650, 400, 127], // Dados ilustrativos baseados na EDA
+              data: [100, 350, 650, 400, 127],
               backgroundColor: primaryMediumBlue,
               borderColor: primaryDarkBlue,
               borderWidth: 1,
             },
             {
               label: "Clientes Existentes",
-              data: [800, 2000, 3500, 1800, 700], // Dados ilustrativos
+              data: [800, 2000, 3500, 1800, 700],
               backgroundColor: lightGray,
               borderColor: "#A9A9A9",
               borderWidth: 1,
@@ -468,7 +484,7 @@
           datasets: [
             {
               label: "Taxa de Churn (%)",
-              data: [5, 8, 18, 30, 45, 55, 60], // Taxas ilustrativas baseadas na EDA
+              data: [5, 8, 18, 30, 45, 55, 60],
               backgroundColor: accentTeal,
               borderColor: primaryDarkBlue,
               tension: 0.1,
@@ -500,15 +516,14 @@
       const transactionsScatterCtx = document
         .getElementById("transactionsScatterPlot")
         .getContext("2d");
-      // Sample data to illustrate the separation
       const churnDataScatter = Array.from({ length: 50 }, () => ({
         x: Math.random() * 60 + 10,
         y: Math.random() * 4000 + 500,
-      })); // Low count, low amount
+      }));
       const existingDataScatter = Array.from({ length: 150 }, () => ({
         x: Math.random() * 100 + 40,
         y: Math.random() * 15000 + 2000,
-      })); // Higher count, higher amount
+      }));
 
       new Chart(transactionsScatterCtx, {
         type: "scatter",
@@ -589,7 +604,7 @@
       ];
 
       new Chart(featureImportanceCtx, {
-        type: "bar", // Horizontal bar chart
+        type: "bar",
         data: {
           labels: featureLabels,
           datasets: [
@@ -603,7 +618,7 @@
           ],
         },
         options: {
-          indexAxis: "y", // This makes it a horizontal bar chart
+          indexAxis: "y",
           responsive: true,
           maintainAspectRatio: false,
           scales: {
