@@ -1,0 +1,82 @@
+{
+  "name": "NCbank Guardian",
+  "dataColors": [
+    "#0A2B5B",
+    "#96BF31",
+    "#4A4A4A",
+    "#D94E4E",
+    "#F5A623",
+    "#E6C300",
+    "#7ED321",
+    "#F2F2F2"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#4A4A4A",
+  "tableAccent": "#0A2B5B",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": true,
+            "color": { "solid": { "color": "#FFFFFF" } },
+            "transparency": 0
+          }
+        ],
+        "visualHeader": [
+          {
+            "foreground": { "solid": { "color": "#0A2B5B" } },
+            "background": { "solid": { "color": "#FFFFFF" } },
+            "border": { "solid": { "color": "#F2F2F2" } }
+          }
+        ],
+        "title": [
+          {
+            "fontColor": { "solid": { "color": "#0A2B5B" } },
+            "background": { "solid": { "color": "#FFFFFF" } },
+            "fontSize": 12
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": { "solid": { "color": "#F2F2F2" } },
+            "transparency": 0
+          }
+        ]
+      }
+    },
+    "slicer": {
+      "*": {
+        "items": [
+          {
+            "fontColor": { "solid": { "color": "#4A4A4A" } },
+            "background": { "solid": { "color": "#F2F2F2" } }
+          }
+        ],
+        "header": [
+          {
+            "fontColor": { "solid": { "color": "#0A2B5B" } }
+          }
+        ]
+      }
+    },
+    "card": {
+      "*": {
+        "labels": [
+          {
+            "color": { "solid": { "color": "#0A2B5B" } }
+          }
+        ],
+        "categoryLabels": [
+          {
+            "color": { "solid": { "color": "#4A4A4A" } }
+          }
+        ]
+      }
+    }
+  }
+}
