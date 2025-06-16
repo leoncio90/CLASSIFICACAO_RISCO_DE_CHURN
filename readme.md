@@ -170,6 +170,7 @@ As instruções detalhadas para configurar e utilizar o dashboard no Power BI es
 │   └── modelo_rf_tunado.pkl          # Modelo Random Forest Tunado
 ├── Dashboard/                        # Pasta com Dashboard gerado no Power BI.
 │   ├── Dashboard_Monitoramento_Estratégico_do_Risco_de_Churn.pbix   # Dashboard de monitoramento do risco de Churn.
+│   ├── Dashboard_Monitoramento_Estratégico_do_Risco_de_Churn.pdf   # pdf do Dashboard de monitoramento do risco de Churn.
 │   └── Tema_NCbank_dashboard.json    # Tema do Dashboard.
 └── Datasets/                         # Pasta com arquivo dataframe e metadados.
     ├── BankChurners.csv              # Dataframe sem tratamento.
