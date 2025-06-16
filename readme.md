@@ -163,6 +163,7 @@ As instruções detalhadas para configurar e utilizar o dashboard no Power BI es
 ├── Infografico.html                  # Infográfico apresentando insights hospedado no Github.
 ├── README.md                         # Este arquivo.
 ├── requirements.txt                  # Lista de dependências Python para o projeto.
+├── logo.png                          # Logomarca do NCbank.
 ├── Dados_Tratados/                   # Pasta (gerada pelo notebook) com os dados processados.
 │   ├── importancia_features_rf.csv   # Importância das features para o Power BI.
 │   └── resultados_RandomForest.csv   # Previsões de churn para cada cliente.
