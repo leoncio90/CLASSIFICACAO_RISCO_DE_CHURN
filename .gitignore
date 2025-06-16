@@ -1,0 +1,10 @@
+# Arquivo de configuração para ignorar arquivos e pastas no Git
+
+# Ignorar pastas de dashboards gerados localmente
+ignorar_Dashboards/
+
+# Ignorar pasta com logos e ativos de banco
+ignorar_Logo_banco/
+
+# Ignorar pasta com artigos ou rascunhos
+ignorar_Artigo/
