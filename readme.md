@@ -115,7 +115,7 @@ Siga os passos abaixo para replicar o ambiente e executar o projeto.
 ### 2. Clonar o Repositório
 
 ```bash
-git clone [https://github.com/leoncio90/CLASSIFICACAO_RISCO_DE_CHURN.git](https://github.com/leoncio90/CLASSIFICACAO_RISCO_DE_CHURN.git)
+git clone https://github.com/leoncio90/CLASSIFICACAO_RISCO_DE_CHURN.git
 cd CLASSIFICACAO_RISCO_DE_CHURN
 ```
 
