@@ -1,5 +1,3 @@
-Markdown
-
 # NCbank Guardian: Análise Preditiva de Churn de Clientes
 
 ## 📜 Sumário Executivo
