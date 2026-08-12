@@ -72,9 +72,9 @@ O projeto seguiu uma metodologia estruturada em 5 etapas principais:
 
 A primeira fase focou em compreender o conjunto de dados, a definição de cada variável e a formulação de hipóteses iniciais sobre os possíveis fatores de churn.
 
-### 2. Pré-processamento e Engenharia de Features (`Tratamento_De_Dados.ipynb`)
+### 2. Pré-processamento e Engenharia de Features (`Tratamento_De_Dados_CSV.ipynb`)
 
-Esta é uma das etapas mais críticas do projeto, executada no notebook `Tratamento_De_Dados.ipynb`. As principais atividades incluíram:
+Esta é uma das etapas mais críticas do projeto, executada no notebook `Tratamento_De_Dados_CSV.ipynb`. As principais atividades incluíram:
 
 - **Limpeza de Dados:** Tratamento de valores ausentes e inconsistências.
 - **Transformação de Variáveis:** Conversão de variáveis categóricas em numéricas (One-Hot Encoding).
@@ -139,13 +139,15 @@ pip install -r requirements.txt
 
 ### 5. Executar a Análise
 
-O notebook `Tratamento_De_Dados.ipynb` contém todo o código para o pipeline de dados e modelagem. Abra-o utilizando o Jupyter Notebook ou Jupyter Lab:
+O notebook `Tratamento_De_Dados_CSV.ipynb` contém todo o código para o pipeline de dados e modelagem. Abra-o utilizando o Jupyter Notebook ou Jupyter Lab:
 
 ```bash
-jupyter notebook Tratamento_De_Dados.ipynb
+jupyter notebook Tratamento_De_Dados_CSV.ipynb
 ```
 
 Execute as células sequencialmente para reproduzir a análise.
+
+Em seguida, execute o notebook `Tratamento_De_Dados _SQL.ipynb`, que finaliza o ETL diretamente via SQL Server.
 
 ### 6. Visualizar o Dashboard
 
@@ -157,7 +159,8 @@ As instruções detalhadas para configurar e utilizar o dashboard no Power BI es
 
 ```
 .
-├── Tratamento_De_Dados.ipynb         # Notebook com todo o processo de ETL e modelagem.
+├── Tratamento_De_Dados_CSV.ipynb         # Notebook com todo o processo de ETL e modelagem.
+├── Tratamento_De_Dados _SQL.ipynb   # Finaliza o ETL via SQL Server.
 ├── Infografico.html                  # Infográfico apresentando insights hospedado no Github.
 ├── README.md                         # Este arquivo.
 ├── requirements.txt                  # Lista de dependências Python para o projeto.
